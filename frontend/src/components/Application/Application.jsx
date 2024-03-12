@@ -35,7 +35,7 @@ const Application = () => {
 
     try {
       const { data } = await axios.post(
-        "https://light-garment-dog.cyclic.app/api/v1/application/post",
+        "https://blue-violet-betta-slip.cyclic.app//api/v1/application/post",
         formData,
         {
           withCredentials: true,

@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://light-garment-dog.cyclic.app/api/v1/user/register",
+        "https://blue-violet-betta-slip.cyclic.app/api/v1/user/register",
         { name, phone, email, role, password },
         {
           headers: {

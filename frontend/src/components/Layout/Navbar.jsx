@@ -13,7 +13,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "https://light-garment-dog.cyclic.app/api/v1/user/logout",
+        "https://blue-violet-betta-slip.cyclic.app/api/v1/user/logout",
         {
           withCredentials: true,
         }
