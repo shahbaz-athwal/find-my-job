@@ -23,7 +23,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://blue-violet-betta-slip.cyclic.app/api/v1/user/getuser",
+          "https://orange-red-starfish-fez.cyclic.app/api/v1/user/getuser",
           {
             withCredentials: true,
           }

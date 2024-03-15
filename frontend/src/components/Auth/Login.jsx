@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://blue-violet-betta-slip.cyclic.app/api/v1/user/login",
+        "https://orange-red-starfish-fez.cyclic.app/api/v1/user/login",
         { email, password, role },
         {
           headers: {
