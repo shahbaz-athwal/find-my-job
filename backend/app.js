@@ -17,10 +17,9 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL], // Specify your front-end app's origin
-    methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"], // Add 'Authorization' if you use it
-    credentials: true, // This should match with 'withCredentials' on the client-side
+    origin: [process.env.FRONTEND_URL],
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
   })
 );
 
