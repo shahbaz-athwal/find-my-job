@@ -17,7 +17,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://job-seeker-mern.vercel.app"],
+    origin: "https://job-seeker-mern.vercel.app",
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
