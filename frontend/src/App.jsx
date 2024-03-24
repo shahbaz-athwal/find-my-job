@@ -23,7 +23,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://orange-red-starfish-fez.cyclic.app/api/v1/user/getuser",
+          `http://localhost:4000/api/v1/user/getuser`,
           {
             withCredentials: true,
           }

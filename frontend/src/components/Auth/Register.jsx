@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://orange-red-starfish-fez.cyclic.app/api/v1/user/register",
+        `http://localhost:4000/api/v1/user/register`,
         { name, phone, email, role, password },
         {
           headers: {
@@ -53,7 +53,7 @@ const Register = () => {
       <section className="authPage">
         <div className="container">
           <div className="header">
-            <img src="/JobZeelogo.png" alt="logo" />
+            <img src="/logo.png" alt="logo" />
             <h3>Create a new account</h3>
           </div>
           <form>
@@ -117,9 +117,9 @@ const Register = () => {
               </div>
             </div>
             <button type="submit" onClick={handleRegister}>
-              Register
+              Sign Up
             </button>
-            <Link to={"/login"}>Login Now</Link>
+            <Link to={"/login"}>Login</Link>
           </form>
         </div>
         <div className="banner">

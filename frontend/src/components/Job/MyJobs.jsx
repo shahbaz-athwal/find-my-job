@@ -17,7 +17,7 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/job/getmyjobs",
+          `http://localhost:4000/api/v1/job/getmyjobs`,
           { withCredentials: true }
         );
         setMyJobs(data.myJobs);
@@ -47,7 +47,7 @@ const MyJobs = () => {
   const handleUpdateJob = async (jobId) => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     await axios
-      .put(`https://orange-red-starfish-fez.cyclic.app/api/v1/job/update/${jobId}`, updatedJob, {
+      .put(`http://localhost:4000/api/v1/job/update/${jobId}`, updatedJob, {
         withCredentials: true,
       })
       .then((res) => {
@@ -62,7 +62,7 @@ const MyJobs = () => {
   //Function For Deleting Job
   const handleDeleteJob = async (jobId) => {
     await axios
-      .delete(`https://orange-red-starfish-fez.cyclic.app/api/v1/job/delete/${jobId}`, {
+      .delete(`http://localhost:4000/api/v1/job/delete/${jobId}`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -171,24 +171,13 @@ const MyJobs = () => {
                             <option value="Frontend Web Development">
                               Frontend Web Development
                             </option>
-                            <option value="MERN Stack Development">
-                              MERN STACK Development
-                            </option>
                             <option value="Account & Finance">
                               Account & Finance
                             </option>
                             <option value="Artificial Intelligence">
                               Artificial Intelligence
                             </option>
-                            <option value="Video Animation">
-                              Video Animation
-                            </option>
-                            <option value="MEAN Stack Development">
-                              MEAN STACK Development
-                            </option>
-                            <option value="MEVN Stack Development">
-                              MEVN STACK Development
-                            </option>
+                            <option value="Animation">Animation</option>
                             <option value="Data Entry Operator">
                               Data Entry Operator
                             </option>
@@ -286,7 +275,7 @@ const MyJobs = () => {
                           />
                         </div>
                         <div>
-                          <span>Location: </span>
+                          <span>Address </span>
                           <textarea
                             value={element.location}
                             rows={5}

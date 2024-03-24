@@ -3,7 +3,7 @@ import { dbConnection } from "./database/dbconnection.js"
 import jobRouter from "./routes/jobRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import applicationRouter from "./routes/applicationRoutes.js";
-// import { config } from "dotenv";
+import { config } from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import fileUpload from "express-fileupload";
@@ -12,12 +12,12 @@ import { errorMiddleware } from "./middlewares/error.js";
 
 
 const app = express();
-// config({ path: "./config/config.env" });
+config({ path: "./config/config.env" });
 
 
 app.use(
   cors({
-    origin: "https://job-seeker-mern.vercel.app",
+    origin: [process.env.FRONTEND_URL],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })

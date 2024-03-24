@@ -10,7 +10,7 @@ const Jobs = () => {
   useEffect(() => {
     try {
       axios
-        .get("https://orange-red-starfish-fez.cyclic.app/api/v1/job/getall", {
+        .get(`http://localhost:4000/api/v1/job/getall`, {
           withCredentials: true,
         })
         .then((res) => {
@@ -27,7 +27,7 @@ const Jobs = () => {
   return (
     <section className="jobs page">
       <div className="container">
-        <h1>ALL AVAILABLE JOBS</h1>
+        <h1>All Available Jobs</h1>
         <div className="banner">
           {jobs.jobs &&
             jobs.jobs.map((element) => {

@@ -12,7 +12,7 @@ const JobDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`https://orange-red-starfish-fez.cyclic.app/api/v1/job/${id}`, {
+      .get(`http://localhost:4000/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -45,7 +45,7 @@ const JobDetails = () => {
             City: <span>{job.city}</span>
           </p>
           <p>
-            Location: <span>{job.location}</span>
+            Address: <span>{job.location}</span>
           </p>
           <p>
             Description: <span>{job.description}</span>
@@ -66,7 +66,7 @@ const JobDetails = () => {
           {user && user.role === "Employer" ? (
             <></>
           ) : (
-            <Link to={`/application/${job._id}`}>Apply Now</Link>
+            <Link to={`/application/${job._id}`}>Apply</Link>
           )}
         </div>
       </div>

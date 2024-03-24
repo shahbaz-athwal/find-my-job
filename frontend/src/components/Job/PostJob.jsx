@@ -31,7 +31,7 @@ const PostJob = () => {
     }
     await axios
       .post(
-        "https://orange-red-starfish-fez.cyclic.app/api/v1/job/post",
+        `http://localhost:4000/api/v1/job/post`,
         fixedSalary.length >= 4
           ? {
               title,
@@ -76,7 +76,7 @@ const PostJob = () => {
     <>
       <div className="job_post page">
         <div className="container">
-          <h3>POST NEW JOB</h3>
+          <h3>Post New Job</h3>
           <form onSubmit={handleJobPost}>
             <div className="wrapper">
               <input
@@ -97,20 +97,11 @@ const PostJob = () => {
                 <option value="Frontend Web Development">
                   Frontend Web Development
                 </option>
-                <option value="MERN Stack Development">
-                  MERN STACK Development
-                </option>
                 <option value="Account & Finance">Account & Finance</option>
                 <option value="Artificial Intelligence">
                   Artificial Intelligence
                 </option>
-                <option value="Video Animation">Video Animation</option>
-                <option value="MEAN Stack Development">
-                  MEAN STACK Development
-                </option>
-                <option value="MEVN Stack Development">
-                  MEVN STACK Development
-                </option>
+                <option value="Animation">Animation</option>
                 <option value="Data Entry Operator">Data Entry Operator</option>
               </select>
             </div>
@@ -132,7 +123,7 @@ const PostJob = () => {
               type="text"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              placeholder="Location"
+              placeholder="Address"
             />
             <div className="salary_wrapper">
               <select

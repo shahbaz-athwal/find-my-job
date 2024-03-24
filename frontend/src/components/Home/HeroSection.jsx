@@ -5,25 +5,25 @@ const HeroSection = () => {
   const details = [
     {
       id: 1,
-      title: "1,23,441",
-      subTitle: "Live Job",
+      title: "5000+",
+      subTitle: "Live Jobs",
       icon: <FaSuitcase />,
     },
     {
       id: 2,
-      title: "91220",
+      title: "1000+",
       subTitle: "Companies",
       icon: <FaBuilding />,
     },
     {
       id: 3,
-      title: "2,34,200",
+      title: "6000+",
       subTitle: "Job Seekers",
       icon: <FaUsers />,
     },
     {
       id: 4,
-      title: "1,03,761",
+      title: "2000+",
       subTitle: "Employers",
       icon: <FaUserPlus />,
     },
@@ -36,13 +36,13 @@ const HeroSection = () => {
             <h1>Find a job that suits</h1>
             <h1>your interests and skills</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              voluptate repellat modi quidem aliquid eaque ducimus ipsa et,
-              facere mollitia!
+            Welcome to our platform, where you can explore a wide range of job opportunities 
+            matching your skills and interests. Whether you're a seasoned professional or 
+            just starting your career journey, we've got something for everyone!
             </p>
           </div>
           <div className="image">
-            <img src="/heroS.jpg" alt="hero" />
+            <img src="/job.jpg" alt="hero" />
           </div>
         </div>
         <div className="details">
