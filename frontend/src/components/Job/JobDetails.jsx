@@ -54,7 +54,7 @@ const JobDetails = () => {
             Job Posted On: <span>{job.jobPostedOn}</span>
           </p>
           <p>
-            Salary:{" "}
+            Salary:{" $"}
             {job.fixedSalary ? (
               <span>{job.fixedSalary}</span>
             ) : (

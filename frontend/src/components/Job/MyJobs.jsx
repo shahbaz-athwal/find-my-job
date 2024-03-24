@@ -171,6 +171,9 @@ const MyJobs = () => {
                             <option value="Frontend Web Development">
                               Frontend Web Development
                             </option>
+                            <option value="Software Development">
+                              Software Development
+                            </option>
                             <option value="Account & Finance">
                               Account & Finance
                             </option>
