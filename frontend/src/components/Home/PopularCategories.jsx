@@ -32,7 +32,7 @@ const PopularCategories = () => {
     },
     {
       id: 4,
-      title: "MERN STACK Development",
+      title: "MERN Stack Development",
       subTitle: "1000+ Open Postions",
       icon: <FaReact />,
     },
@@ -63,7 +63,7 @@ const PopularCategories = () => {
   ];
   return (
     <div className="categories">
-      <h3>POPULAR CATEGORIES</h3>
+      <h3>Popular Categories</h3>
       <div className="banner">
         {categories.map((element) => {
           return (
