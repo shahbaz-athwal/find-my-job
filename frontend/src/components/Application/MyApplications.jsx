@@ -26,11 +26,7 @@ const MyApplications = () => {
           });
       } else {
         axios
-<<<<<<< HEAD
           .get(`http://localhost:4000/api/v1/application/jobseeker/getall`, {
-=======
-          .get(`https://find-my-job.onrender.com/api/v1/application/jobseeker/getall`, {
->>>>>>> 5d0b211652c9eb7e23d3c88e4956cc42b2d5d0ba
             withCredentials: true,
           })
           .then((res) => {
