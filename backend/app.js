@@ -38,7 +38,7 @@ app.use("/api/v1/job", jobRouter);
 app.use("/api/v1/application", applicationRouter);
 app.get("/", (req, res, next)=>{return res.status(200).json({
   success: true,
-  message: "HELLO WORLD"
+  message: "Backend Running!"
 })})
 
 dbConnection();

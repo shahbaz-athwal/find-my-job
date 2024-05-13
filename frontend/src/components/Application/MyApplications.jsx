@@ -26,7 +26,7 @@ const MyApplications = () => {
           });
       } else {
         axios
-          .get(`http://localhost:4000}/api/v1/application/jobseeker/getall`, {
+          .get(`http://localhost:4000/api/v1/application/jobseeker/getall`, {
             withCredentials: true,
           })
           .then((res) => {
