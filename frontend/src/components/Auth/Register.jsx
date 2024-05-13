@@ -121,6 +121,7 @@ const Register = () => {
             </button>
             <Link to={"/login"}>Login</Link>
           </form>
+          <div className="note">NOTE: Backend is deployed on Render using a free subscription, It may take upto 50 seconds to initiate the API hitpoint.</div>
         </div>
         <div className="banner">
           <img src="/register.png" alt="login" />

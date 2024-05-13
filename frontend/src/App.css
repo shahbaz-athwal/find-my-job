@@ -79,6 +79,10 @@ p {
   margin: 0 auto;
   min-height: 100vh;
 }
+.authPage .container .note{
+  padding-top: 15px;
+  
+}
 .authPage .container {
   flex: 1;
   display: flex;
