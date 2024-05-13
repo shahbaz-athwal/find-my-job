@@ -18,7 +18,7 @@ const MyApplications = () => {
     try {
       if (user && user.role === "Employer") {
         axios
-          .get(`http://localhost:4000/api/v1/application/employer/getall`, {
+          .get(`https://find-my-job.onrender.com/api/v1/application/employer/getall`, {
             withCredentials: true,
           })
           .then((res) => {
@@ -26,7 +26,11 @@ const MyApplications = () => {
           });
       } else {
         axios
+<<<<<<< HEAD
           .get(`http://localhost:4000/api/v1/application/jobseeker/getall`, {
+=======
+          .get(`https://find-my-job.onrender.com/api/v1/application/jobseeker/getall`, {
+>>>>>>> 5d0b211652c9eb7e23d3c88e4956cc42b2d5d0ba
             withCredentials: true,
           })
           .then((res) => {
@@ -45,7 +49,7 @@ const MyApplications = () => {
   const deleteApplication = (id) => {
     try {
       axios
-        .delete(`http://localhost:4000/api/v1/application/delete/${id}`, {
+        .delete(`https://find-my-job.onrender.com/api/v1/application/delete/${id}`, {
           withCredentials: true,
         })
         .then((res) => {
