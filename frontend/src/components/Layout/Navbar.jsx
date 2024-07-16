@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../../main";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -20,54 +20,61 @@ const Navbar = () => {
       );
       toast.success(response.data.message);
       setIsAuthorized(false);
-      navigateTo("/login");
+      navigateTo("/");
     } catch (error) {
       toast.error(error.response.data.message), setIsAuthorized(true);
     }
   };
 
   return (
-    <nav className={isAuthorized ? "navbarShow" : "navbarHide"}>
+    <nav className="navbar">
       <div className="container">
         <div className="logo">
           <img src="/logo-white.png" alt="logo" />
         </div>
         <ul className={!show ? "menu" : "show-menu menu"}>
-          <li>
-            <Link to={"/"} onClick={() => setShow(false)}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to={"/job/getall"} onClick={() => setShow(false)}>
-              All Jobs
-            </Link>
-          </li>
-          <li>
-            <Link to={"/applications/me"} onClick={() => setShow(false)}>
-              {user && user.role === "Employer"
-                ? "Applicant's Applications"
-                : "My Applications"}
-            </Link>
-          </li>
-          {user && user.role === "Employer" ? (
+          {isAuthorized ? (
             <>
               <li>
-                <Link to={"/job/post"} onClick={() => setShow(false)}>
-                  Post New Job
+                <Link to={"/"} onClick={() => setShow(false)}>
+                  Home
                 </Link>
               </li>
               <li>
-                <Link to={"/job/me"} onClick={() => setShow(false)}>
-                  View Your Jobs
+                <Link to={"/job/getall"} onClick={() => setShow(false)}>
+                  All Jobs
                 </Link>
               </li>
+              <li>
+                <Link to={"/applications/me"} onClick={() => setShow(false)}>
+                  {user && user.role === "Employer"
+                    ? "Applicant's Applications"
+                    : "My Applications"}
+                </Link>
+              </li>
+              {user && user.role === "Employer" ? (
+                <>
+                  <li>
+                    <Link to={"/job/post"} onClick={() => setShow(false)}>
+                      Post New Job
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/job/me"} onClick={() => setShow(false)}>
+                      View Your Jobs
+                    </Link>
+                  </li>
+                </>
+              ) : null}
+              <button onClick={handleLogout}>Logout</button>
             </>
           ) : (
-            <></>
+            <li>
+              <Link to={"/login"} onClick={() => setShow(false)}>
+                Login
+              </Link>
+            </li>
           )}
-
-          <button onClick={handleLogout}>Logout</button>
         </ul>
         <div className="hamburger">
           <GiHamburgerMenu onClick={() => setShow(!show)} />
