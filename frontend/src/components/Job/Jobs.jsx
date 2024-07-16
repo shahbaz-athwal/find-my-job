@@ -10,7 +10,7 @@ const Jobs = () => {
   useEffect(() => {
     try {
       axios
-        .get(`https://find-my-job.onrender.com/api/v1/job/getall`, {
+        .get(`https://findmyjob-server-3nwczgnn4q-uc.a.run.app/api/v1/job/getall`, {
           withCredentials: true,
         })
         .then((res) => {

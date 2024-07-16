@@ -18,7 +18,7 @@ const MyApplications = () => {
     try {
       if (user && user.role === "Employer") {
         axios
-          .get(`https://find-my-job.onrender.com/api/v1/application/employer/getall`, {
+          .get(`https://findmyjob-server-3nwczgnn4q-uc.a.run.app/api/v1/application/employer/getall`, {
             withCredentials: true,
           })
           .then((res) => {
@@ -45,7 +45,7 @@ const MyApplications = () => {
   const deleteApplication = (id) => {
     try {
       axios
-        .delete(`https://find-my-job.onrender.com/api/v1/application/delete/${id}`, {
+        .delete(`https://findmyjob-server-3nwczgnn4q-uc.a.run.app/api/v1/application/delete/${id}`, {
           withCredentials: true,
         })
         .then((res) => {
